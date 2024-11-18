@@ -1,0 +1,44 @@
+#a{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#nav{
+    background-color: blueviolet;
+    width: 1000px;
+    font-size: 32px;
+    margin: 16px;
+    margin-bottom: 32px;
+    padding: 16px;
+}
+
+#inf{
+    background-color:gray;
+    font-size: 32px;
+    height: 500px;
+    margin: 16px;
+    padding: 16px;
+}
+
+#per{
+    background-color: brown;
+    margin: 16px;
+    margin-bottom: 32px;
+}
+
+#vid{
+    background-color:cornflowerblue;
+    margin: 16px;
+    padding: 16px;
+}
+
+#perpic{
+    width: 200px;
+    height: 200px;
+    padding: 16px;
+}
+
+#perbar{
+    padding: 16px;
+}
