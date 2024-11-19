@@ -32,3 +32,10 @@
 .qus {
     color: aqua;
 }
+.infotext{
+    margin: 10px;
+    font-family: Trebuchet MS;
+}
+.infobtn{
+    margin: 4px;
+}
