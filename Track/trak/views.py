@@ -9,6 +9,7 @@ def main(request):
         exp = request.POST.get('exp')
         quest.objects.create(nameQu=nameQu, comments=comments, exp=exp)
     return render(request,'trak/main.html',{'quests':quests})
-def deleters(id):
-        quest.delete(id)
+def deleters(request,id):
+        Quest = quest.objects.get(id=id)
+        Quest.delete()
         return HttpResponseRedirect('/')
