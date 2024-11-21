@@ -17,6 +17,11 @@ from .models import task
 
 
 class TaskAPI(APIView):
+   def get_object(self, pk):
+      try:
+         return task.objects.get(pk=pk)
+      except task.DoesNotExist:
+            return Response({'message':'Ошибка'})
    def get(self, req):
       t = task.objects.all().values()
       return Response({'task':list(t)})
@@ -28,3 +33,12 @@ class TaskAPI(APIView):
          exp = request.data['exp']
       )
       return Response({'message':'Задача добавлена'})
+   def delete(self, request, pk):
+      s = self.get_object(pk)
+      s.delete()
+      return Response({'message':'Удалено'})
+   def put(self, request, pk):
+      s = self.get_object(pk)
+      s.done = True
+      s.save(update_fields=['done'])
+      return Response({'message':'Успех'})
