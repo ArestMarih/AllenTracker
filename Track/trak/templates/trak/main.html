@@ -13,18 +13,19 @@
                 <div id="nav">NAVIGATION</div>
                 <div id="inf">JOUNRAL
                     {% for quest in quests %}
-                    <div id='inf-tsk'><!--task-->
-                        <div id='inf-tsk-qnd'><!--task name-decsr colum-->
+                    <div id='inf-tsk'><!--task block-->
+                        <div id='inf-tsk-qnd'><!--colum name-descr-->
                             <div class="infmargins">{{ quest.nameQu }}</div>
                             <div class="infmargins">{{ quest.comments }}</div>
                         </div>
-                        <div id='inf-tsk-rbt'><!--reward-button colum-->
-                            <div>Reward:<span style="font-weight: bold;">{{ quest.exp }} XP</span></div>
-                                <div id='inf-tsk-rbt-b'><!--buttons-->
-                                    <button class='infbtns'>Done!</button>
-                                    <button class='infbtns'>Delete</button>
-                                </div>
+                        <div id='inf-tsk-rbt'><!--colum reward-button-->
+                            <div>Reward: {{ quest.exp }} XP </div>
+                            <div id='inf-tsk-rbt-b'>
+                                <button class='infbtns'>Done!</button>
+                                <button class='infbtns'>Delete</button>
                             </div>
+                        </div>
+                        <div>
                             {% comment %} <p class='qus'>{{ quest.nameQu }} </p>
                             <p class='qus'>{{ quest.comments }} </p>
                             <p class='qus'>{{ quest.exp }} </p> {% endcomment %}
