@@ -1,6 +1,8 @@
-.b{
-    flex-direction: column;
-}
+body{font-family: 'Trebuchet MS', sans-serif; margin-top:50px;}
+
+.b{display: flex; flex-direction: column;}
+.infmargins{margin: 5px;}
+.infbtns{font-family: 'Trebuchet MS', sans-serif; font-size: 16px; padding: 0px 15px; border-radius: 8px; margin: 0px 5px;}
 
 .form-container {
     max-width: 300px;
@@ -27,15 +29,4 @@
   
 .form-container .cancel {
     background-color: red;
-  }
-
-.qus {
-    color: aqua;
-}
-.infotext{
-    margin: 10px;
-    font-family: Trebuchet MS;
-}
-.infobtn{
-    margin: 4px;
 }

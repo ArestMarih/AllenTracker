@@ -8,23 +8,23 @@
         <link rel="stylesheet" type="text/css" href="{% static 'css/id.css'%}">
     </head>
     <body>
-        <div id="a">
-            <div class="b">
+        <div id="a"><!--main block-->
+            <div class="b"><!--colum 1-->
                 <div id="nav">NAVIGATION</div>
-                <div id="inf">
+                <div id="inf">JOUNRAL
                     {% for quest in quests %}
-                    <div id='info'>
-                        <div id='infostate'>
-                            <div class='infotext' id='infomain'>{{ quest.nameQu }} {{ quest.comments }} </div>
-                                <div id='inforb'>
-                                    <div class='infotext'>Reward: {{ quest.exp }} XP </div>
-                                        <div class='infotext'>
-                                            <div id='infob'>
-                                                <button class='infobtn'>Done!</button>
-                                                <button class='infobtn'>Delete</button>
-                                            </div>
-                                        </div>
+                    <div id='inf-tsk'><!--task-->
+                        <div id='inf-tsk-qnd'><!--task name-decsr colum-->
+                            <div class="infmargins">{{ quest.nameQu }}</div>
+                            <div class="infmargins">{{ quest.comments }}</div>
+                        </div>
+                        <div id='inf-tsk-rbt'><!--reward-button colum-->
+                            <div>Reward:<span style="font-weight: bold;">{{ quest.exp }} XP</span></div>
+                                <div id='inf-tsk-rbt-b'><!--buttons-->
+                                    <button class='infbtns'>Done!</button>
+                                    <button class='infbtns'>Delete</button>
                                 </div>
+                            </div>
                             {% comment %} <p class='qus'>{{ quest.nameQu }} </p>
                             <p class='qus'>{{ quest.comments }} </p>
                             <p class='qus'>{{ quest.exp }} </p> {% endcomment %}
@@ -33,7 +33,7 @@
                     {% endfor %}
                 </div>
             </div>
-            <div class="b">
+            <div class="b"><!-- cloum 2-->
                 <div id="per">
                     <div id="perpic">PERSON</div>
                     <div id="perbar">XP bar</div>

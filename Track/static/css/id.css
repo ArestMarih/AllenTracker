@@ -1,25 +1,11 @@
-#a{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
+#a{display: flex; justify-content: center; text-align: center;}
+#nav{width: 700px; height: 50px;}
 
-#nav{
-    background-color: blueviolet;
-    width: 1000px;
-    font-size: 32px;
-    margin: 16px;
-    margin-bottom: 32px;
-    padding: 16px;
-}
-
-#inf{
-    background-color:gray;
-    font-size: 32px;
-    height: 500px;
-    margin: 16px;
-    padding: 16px;
-}
+#inf{border: 1px solid black; border-radius: 3px;}
+#inf-tsk{border: 2px solid black; border-radius: 3px; margin: 5px; display: flex; text-align: left; justify-content: space-between;}
+#inf-tsk-qnd{flex-direction: column;}
+#inf-tsk-rbt{flex-direction: column; margin: 5px;}
+#inf-tsk-rbt-b{display: flex; justify-content: end; margin: 5px; flex-wrap: nowrap;}
 
 #per{
     background-color: brown;
@@ -41,24 +27,4 @@
 
 #perbar{
     padding: 16px;
-}
-#info{
-    display: flex;
-    justify-content: center;
-}
-#inforb{
-    flex-direction: column;
-}
-#infomain{
-}
-#infostate{
-    border: 2px solid black;
-    border-radius: 3px;
-    display: flex;
-    width: 750px;
-    justify-content: space-between;
-}
-#infob{
-    display: flex;
-    flex-wrap: nowrap;
 }
