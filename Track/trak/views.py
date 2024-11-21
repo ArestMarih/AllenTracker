@@ -1,13 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponseRedirect
 from trak.models import quest
 
 def main(request):
-    context = {
-        'quests': quest.objects.all()
-    }
+    quests = quest.objects.all()
     if request.method == "POST":
         nameQu = request.POST.get('nameQu')
         comments = request.POST.get('comments')
         exp = request.POST.get('exp')
         quest.objects.create(nameQu=nameQu, comments=comments, exp=exp)
-    return render(request,'trak/main.html', context)
+    return render(request,'trak/main.html',{'quests':quests})
+def deleters(id):
+        quest.delete(id)
+        return HttpResponseRedirect('/')
